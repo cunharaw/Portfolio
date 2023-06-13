@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio - Pedro Cunha
 
 Welcome to my GitHub portfolio!
 
