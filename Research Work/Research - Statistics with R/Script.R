@@ -2,7 +2,7 @@
 #1.1 - LER FICHEIRO EXCEL E MOSTRAR DADOS
 install.packages("readxl")
 
-dados<-readxl::read_excel("Grupo4.xlsx")
+dados<-readxl::read_excel("Dataset.xlsx")
 
 ls()
 
@@ -27,14 +27,14 @@ dadosfinal <- dados_MKM[dados_MKM$`Maximo KM`<Upper_MKM,]
 
 View(dadosfinal)
 
-cat("Outliers moderados Máximo KM, são os valores que se encontram fora do 
+cat("Outliers moderados MÃ¡ximo KM, sÃ£o os valores que se encontram fora do 
 intervalo: [", Lower_MKM, ",", Upper_MKM,"]")
 #############################################
 
 #############################################
 #1.3 - TABELAS
 
-#1.3.1 - TABELA FREQ. E GRÁFICO: TIPO CINEMA
+#1.3.1 - TABELA FREQ. E GRÃFICO: TIPO CINEMA
 
 niC = table(dadosfinal[1]) #freq. absolutas simples tipo cinema
 fiC = niC /sum(niC) #freq. relativas simples tipo cinema
@@ -45,12 +45,12 @@ tabelaTipoCimema = cbind(niC, fiC, NiC, FiC)
 
 tabelaTipoCimema 
 
-grafico_tipoCin <- barplot(niC,main="Distribuição por Tipo Cinema", 
-ylab= "Número de Jovens",xlab="Tipo de cinema", , border="black", col="pink")
+grafico_tipoCin <- barplot(niC,main="DistribuiÃ§Ã£o por Tipo Cinema", 
+ylab= "NÃºmero de Jovens",xlab="Tipo de cinema", , border="black", col="pink")
 text(grafico_tipoCin, 0, round(niC, 1),cex=1,pos=3) 
 
 
-#1.3.2 - TABELA FREQ. E GRÁFICO: DIAS DE FÉRIAS
+#1.3.2 - TABELA FREQ. E GRÃFICO: DIAS DE FÃ‰RIAS
 
 #1 - numero classes
 
@@ -97,12 +97,12 @@ colnames(TabelaFerias2)[1]<- "niF"
 
 TabelaFerias2
 
-grafico_ferias <- barplot(TabelaFerias ,main="Distribuição Dias de Férias", 
-ylab= "Número de Jovens",xlab="Dias de Férias", border="black", col="purple")
+grafico_ferias <- barplot(TabelaFerias ,main="DistribuiÃ§Ã£o Dias de FÃ©rias", 
+ylab= "NÃºmero de Jovens",xlab="Dias de FÃ©rias", border="black", col="purple")
 text(grafico_ferias , 0, round(TabelaFerias, 1),cex=1,pos=3) 
 
 
-#1.3.3 - TABELA FREQ. E GRÁFICO: GRAU DE GOSTO DE CINEMA
+#1.3.3 - TABELA FREQ. E GRÃFICO: GRAU DE GOSTO DE CINEMA
 
 niG = table(dadosfinal[3]) #freq. absolutas simples grau gosto
 fiG = round(niG /sum(niG),digits = 2) #freq. relativas simples grau gosto
@@ -113,14 +113,14 @@ tabelaGrau = cbind(niG, fiG, NiG, FiG)
 
 tabelaGrau 
 
-grafico_grauGosto <- barplot(niG,main="Distribuição por Grau de Gosto de Cinema"
-, ylab= "Número de Jovens",xlab="Grau de Gosto de Cinema"
+grafico_grauGosto <- barplot(niG,main="DistribuiÃ§Ã£o por Grau de Gosto de Cinema"
+, ylab= "NÃºmero de Jovens",xlab="Grau de Gosto de Cinema"
 ,border="black", col="lightblue")
 
 text(grafico_grauGosto, 0, round(niG, 1),cex=1,pos=3) 
 
 
-#1.3.4 - TABELA FREQ. E GRÁFICO: IDAS SEMANAIS AO CINEMA
+#1.3.4 - TABELA FREQ. E GRÃFICO: IDAS SEMANAIS AO CINEMA
 
 niI = table(dadosfinal[4]) #freq. absolutas simples idas cinema
 fiI = round(niI/sum(niI), digits = 3) #freq. relativas simples idas cinema
@@ -131,14 +131,14 @@ tabelaIdas = cbind(niI, fiI, NiI, FiI)
 
 tabelaIdas
 
-grafico_idasSem <- barplot(niI,main="Distribuição por Idas Semanais ao Cinema"
-, ylab= "Número de Jovens",xlab="Idas Semanais ao Cinema"
+grafico_idasSem <- barplot(niI,main="DistribuiÃ§Ã£o por Idas Semanais ao Cinema"
+, ylab= "NÃºmero de Jovens",xlab="Idas Semanais ao Cinema"
 , border="black", col="lightgreen")
 
 text(grafico_idasSem , 0, round(niI, 1),cex=1,pos=3) 
 
 
-#1.3.5 - TABELA FREQ. E GRÁFICO: MAXIMO KM
+#1.3.5 - TABELA FREQ. E GRÃFICO: MAXIMO KM
 
 #1 - numero classes
 
@@ -176,12 +176,12 @@ colnames(Tabela2)[1]<- "niM"
 
 Tabela2
 
-grafico_km <- barplot(Tabela1,main="Distribuição Máximo KM"
-, ylab= "Número de Jovens",xlab="Máximo KM", border="black", col="orange")
+grafico_km <- barplot(Tabela1,main="DistribuiÃ§Ã£o MÃ¡ximo KM"
+, ylab= "NÃºmero de Jovens",xlab="MÃ¡ximo KM", border="black", col="orange")
 text(grafico_km, 0, round(Tabela1, 1),cex=1,pos=3)  
 
 
-#1.3.6 - TABELA FREQ. E GRÁFICO: PREÇO MAX BILHETE
+#1.3.6 - TABELA FREQ. E GRÃFICO: PREÃ‡O MAX BILHETE
 
 #1 - numero classes
 
@@ -219,8 +219,8 @@ colnames(Tabela4)[1]<- "niB"
 
 Tabela4
 
-grafico_bil <- barplot(Tabela3,main="Distribuição Preço Máximo Bilhete"
-, ylab= "Número de Jovens",xlab="Preço Máximo Bilhete"
+grafico_bil <- barplot(Tabela3,main="DistribuiÃ§Ã£o PreÃ§o MÃ¡ximo Bilhete"
+, ylab= "NÃºmero de Jovens",xlab="PreÃ§o MÃ¡ximo Bilhete"
 , border="black", col="red")
 
 text(grafico_bil, 0, round(Tabela3, 1),cex=1,pos=3)  
@@ -229,14 +229,14 @@ text(grafico_bil, 0, round(Tabela3, 1),cex=1,pos=3)
 #############################################
 1.4 - MEDIDAS DESCRITIVAS
 
-#1.4.1 - MEDIDAS DE LOCALIZAÇÃO CENTRAL E NAO CENTRAL
+#1.4.1 - MEDIDAS DE LOCALIZAÃ‡ÃƒO CENTRAL E NAO CENTRAL
 summary(dadosfinal[2]) 
 summary(dadosfinal[4])	
 summary(dadosfinal[5])	
 summary(dadosfinal[6])	
 
 
-#1.4.2 - MEDIDAS DE DISPERSÃO
+#1.4.2 - MEDIDAS DE DISPERSÃƒO
 var(dadosfinal[[2]]) 
 sd(dadosfinal[[2]]) 
 cv1=sd(dadosfinal[[2]])/mean(dadosfinal[[2]]) 
@@ -277,10 +277,10 @@ kurtosis(dadosfinal[[5]])
 kurtosis(dadosfinal[[6]])
 
 #DIAGRAMA DE EXTREMOS E QUARTIS
-boxplot(dadosfinal[2], main="Distribuição dos dias de férias", xlab="Dias de Férias", ylab="Jovens", col="cyan", horizontal=TRUE)
-boxplot(dadosfinal[4], main="Distribuição das idas semanais ao cinema", xlab="Idas semanais ao cinema", ylab="Jovens", col="hotpink", horizontal=TRUE)
-boxplot(dadosfinal[5], main="Distribuição do maximo de km", xlab="maximo de km", ylab="Jovens", col="midnightblue", horizontal=TRUE)
-boxplot(dadosfinal[6], main="Distribuição do preço maximo do bilhete", xlab="Preço Maximo do bilhete", ylab="Jovens", col="orangered", horizontal=TRUE)                   
+boxplot(dadosfinal[2], main="DistribuiÃ§Ã£o dos dias de fÃ©rias", xlab="Dias de FÃ©rias", ylab="Jovens", col="cyan", horizontal=TRUE)
+boxplot(dadosfinal[4], main="DistribuiÃ§Ã£o das idas semanais ao cinema", xlab="Idas semanais ao cinema", ylab="Jovens", col="hotpink", horizontal=TRUE)
+boxplot(dadosfinal[5], main="DistribuiÃ§Ã£o do maximo de km", xlab="maximo de km", ylab="Jovens", col="midnightblue", horizontal=TRUE)
+boxplot(dadosfinal[6], main="DistribuiÃ§Ã£o do preÃ§o maximo do bilhete", xlab="PreÃ§o Maximo do bilhete", ylab="Jovens", col="orangered", horizontal=TRUE)                   
 #############################################
 
 
@@ -291,7 +291,7 @@ IdasAnuais=round(dadosfinal[4]*52.179, digits = 0) #multiplicar pelo numero de s
 
 colnames(IdasAnuais)[1]<- "Idas Anuais ao cinema" 
 
-dados1=cbind(dadosfinal,IdasAnuais)# junta a nova variável à base de dados
+dados1=cbind(dadosfinal,IdasAnuais)# junta a nova variÃ¡vel Ã  base de dados
 
 View(dados1)
 
@@ -304,8 +304,8 @@ tabelaIdasAnuais = cbind(niA, fiA, NiA, FiA)
 
 tabelaIdasAnuais 
 
-grafico_idasAnuais <- barplot(niA,main="Distribuição por Idas Anuais ao Cinema"
-, ylab= "Número de Jovens",xlab="Idas Anuais ao Cinema"
+grafico_idasAnuais <- barplot(niA,main="DistribuiÃ§Ã£o por Idas Anuais ao Cinema"
+, ylab= "NÃºmero de Jovens",xlab="Idas Anuais ao Cinema"
 , border="black", col="yellow")
 
 text(grafico_idasAnuais , 0, round(niA, 1),cex=1,pos=3) 
@@ -320,32 +320,32 @@ cv
 skewness(dados1[[7]])
 kurtosis(dados1[[7]])
 
-boxplot(dados1[7], main="Distribuição das idas anuais ao cinema", xlab="Idas Anuais ao Cinema", ylab="Jovens", col="grey", horizontal=TRUE)
+boxplot(dados1[7], main="DistribuiÃ§Ã£o das idas anuais ao cinema", xlab="Idas Anuais ao Cinema", ylab="Jovens", col="grey", horizontal=TRUE)
 #############################################
 
 
 #############################################
-#1.6 - Comparar preço máximo disposto a pagar por um bilhete, em  euros,  por  tipo  de  cinema preferido
+#1.6 - Comparar preÃ§o mÃ¡ximo disposto a pagar por um bilhete, em  euros,  por  tipo  de  cinema preferido
 
 tapply(dadosfinal[[6]],dadosfinal[[1]],summary)  
 tapply(dadosfinal[[6]],dadosfinal[[1]],sd)  
-boxplot(dadosfinal[[6]]~dadosfinal[[1]],xlab="Preço Maximo Bilhete", ylab="Tipo de Cinema", main="Distribuição Tipo Cinema", col="violet", horizontal=TRUE) 
+boxplot(dadosfinal[[6]]~dadosfinal[[1]],xlab="PreÃ§o Maximo Bilhete", ylab="Tipo de Cinema", main="DistribuiÃ§Ã£o Tipo Cinema", col="violet", horizontal=TRUE) 
 #############################################
 
 #############################################
-1.7 - coeficiente de correlação de Pearson
+1.7 - coeficiente de correlaÃ§Ã£o de Pearson
 
-#Package para efetuar coeficiente de correlação de Pearson
+#Package para efetuar coeficiente de correlaÃ§Ã£o de Pearson
 install.packages("ggpubr")
 library("ggpubr")
 
-ggscatter(dadosfinal, x = "Dias de férias", y = "Idas semanais ao cinema", 
+ggscatter(dadosfinal, x = "Dias de fÃ©rias", y = "Idas semanais ao cinema", 
           add = "reg.line", conf.int = TRUE, 
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "Dias de férias", ylab = "Idas semanais ao cinema")
+          xlab = "Dias de fÃ©rias", ylab = "Idas semanais ao cinema")
 
-ggscatter(dadosfinal, x = "Maximo KM", y = "Preço Máximo Bilhete", 
+ggscatter(dadosfinal, x = "Maximo KM", y = "PreÃ§o MÃ¡ximo Bilhete", 
           add = "reg.line", conf.int = TRUE, 
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "Maximo KM", ylab = "Preço Máximo Bilhete")
+          xlab = "Maximo KM", ylab = "PreÃ§o MÃ¡ximo Bilhete")
 #############################################
