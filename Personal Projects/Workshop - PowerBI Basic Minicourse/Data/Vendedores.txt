@@ -1,0 +1,19 @@
+Relatório de Vendedores
+Exportado em 17 de julho
+
+
+Cod Vendedor	Vendedor
+80501	Rodrigo Gomes
+80502	Paulo Santos
+80503	Breno Azevedo
+80504	João Cavalcanti
+80505	Clara Oliveira
+80506	Daniel Gomes
+80507	Tiago César
+80508	Douglas Domingues
+80509	Julia Santos
+80510	Mateus Oliveira
+80511	Carlos Silva
+80512	Ana Vilela
+80513	Marcelo Souza
+80514	Davi Pereira
